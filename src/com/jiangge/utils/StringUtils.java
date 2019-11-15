@@ -72,7 +72,7 @@ public class StringUtils {
 	 
 	 /**
 	  * 将集合按照给定的分隔转化成字符串
-	  * @param arr
+	  * @param expr
 	  * @param expr
 	  * @return
 	  */

@@ -69,8 +69,9 @@ public class FileUtils {
 				str.append(e.toString());
 			}
 			st = str.toString();
-			if (st != null && st.length() > 1)
+			if (st != null && st.length() > 1){
 				st = st.substring(0, st.length() - 1);
+			}
 		} catch (IOException es) {
 			st = "";
 		}

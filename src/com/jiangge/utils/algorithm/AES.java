@@ -1,10 +1,10 @@
 package com.jiangge.utils.algorithm;
 
-import java.security.SecureRandom;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+import java.security.SecureRandom;
 
 
 /**
@@ -13,7 +13,10 @@ import javax.crypto.spec.SecretKeySpec;
  *
  */
 public class AES {
-	
+
+	/**
+	 * √‹¬Î
+	 */
 	private static final String PASSWORD = "1234567890";
 	
 	

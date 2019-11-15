@@ -1,8 +1,8 @@
 package com.jiangge.utils;
 
-import java.util.List;
-
 import com.jiangge.utils.mail.EmailHandle;
+
+import java.util.List;
 
 /**
  * 邮件发送工具类
@@ -17,7 +17,7 @@ public class EmailUtils {
 	 * @param smtp        邮件协议
 	 * @param fromAddress 发送人地址
 	 * @param fromPass    发送人密码
-	 * @param toaddress   收件人地址
+	 * @param toAddress   收件人地址
 	 * @param subject     发送主题
 	 * @param content     发送内容
 	 * @throws Exception
@@ -78,7 +78,7 @@ public class EmailUtils {
 	 * @param smtp        邮件协议
 	 * @param fromAddress 发送人地址
 	 * @param fromPass    发送人密码
-	 * @param toaddress   收件人地址
+	 * @param toAddress   收件人地址
 	 * @param subject     发送主题
 	 * @param content     发送内容
 	 * @throws Exception

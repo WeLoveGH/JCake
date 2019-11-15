@@ -1,9 +1,9 @@
 package com.jiangge.utils;
 
-import java.util.List;
-
 import com.jiangge.utils.task.TaskEntity;
 import com.jiangge.utils.task.TaskPoolManager;
+
+import java.util.List;
 
 /**
  * Java多线程、队列实现任务调度
@@ -23,7 +23,7 @@ public class TaskUtils {
 	
 	 /**
      * 添加异步任务(单个任务)
-     * @param taskList
+     * @param task
      */
 	public static void addTask(TaskEntity task){
 		TaskPoolManager.newInstance().addTask(task);

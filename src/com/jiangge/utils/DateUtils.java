@@ -158,7 +158,7 @@ public class DateUtils {
 	 * @return long Ê±¼ä´Á
 	 */
 	public static long dateToUnixTimestamp() {
-		long timestamp = new Date().getTime();
+		long timestamp = System.currentTimeMillis();
 		return timestamp;
 	}
 

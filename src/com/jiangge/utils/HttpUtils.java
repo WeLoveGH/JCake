@@ -19,7 +19,7 @@ public class HttpUtils {
 	/**
      * 向指定URL发送GET方法的请求
      * @param url 发送请求的URL
-     * @param param 请求参数
+     * @param params 请求参数
      * @return URL 所代表远程资源的响应结果
      */
     public static String sendGet(String url, HashMap<String,String> params) {
@@ -60,7 +60,7 @@ public class HttpUtils {
     /**
      * 向指定 URL 发送POST方法的请求
      * @param url 发送请求的 URL
-     * @param param 请求参数
+     * @param params 请求参数
      * @return 所代表远程资源的响应结果
      */
     public static String sendPost(String url, HashMap<String,String> params) {

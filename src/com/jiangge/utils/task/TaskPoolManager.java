@@ -3,13 +3,9 @@ package com.jiangge.utils.task;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executors;
-import java.util.concurrent.RejectedExecutionHandler;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
+
+import static java.util.concurrent.Executors.newScheduledThreadPool;
 
 /**
  * 线程池管理
@@ -57,6 +53,7 @@ public class TaskPoolManager {
 	};
 	
 	final RejectedExecutionHandler handler = new RejectedExecutionHandler() {
+		@Override
 		public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
 			taskQueue.offer(((TaskRunner) r).getTask());
 		}
@@ -68,7 +65,7 @@ public class TaskPoolManager {
 			new ArrayBlockingQueue<Runnable>(WORK_QUEUE_SIZE), this.handler);
 	
 	/**调度线程池**/
-	final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+	final ScheduledExecutorService scheduler = newScheduledThreadPool(1);
 	
 	final ScheduledFuture<?> taskHandler = scheduler.scheduleAtFixedRate(accessBufferThread, 0, 1, TimeUnit.SECONDS);
 

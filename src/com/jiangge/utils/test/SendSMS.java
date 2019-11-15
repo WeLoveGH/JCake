@@ -5,8 +5,7 @@ import java.util.Map;
 public class SendSMS {
 	/**
 	 * 向指定手机号发送短信
-	 * @param phone
-	 * @param content
+	 * @param taskParam
 	 */
 	public void send(Map<String, String> taskParam){
 		/**获取手机号和发送的内容**/
